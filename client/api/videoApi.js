@@ -1,6 +1,5 @@
 "use strict";
 
-//This file is mocking a web API by hitting hard coded data.
 var RestConfig = require('../constants/restConfig');
 var Dispatcher = require('../dispatcher/appDispatcher');
 var ActionTypes = require('../constants/actionTypes');
@@ -46,6 +45,5 @@ var VideoApi = {
 		var video = _.find(videos, {id: id});
 		return _clone(video);
 	}
-
-
+};
 module.exports = VideoApi;
