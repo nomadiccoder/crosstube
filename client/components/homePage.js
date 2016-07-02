@@ -7,13 +7,20 @@ var VideoList = require('./video/videoList');
 var Link = Router.Link;
 
 var Home = React.createClass({
+
+	getInitialState(){
+    return {
+      videos = VideoStore.getAllVideos()
+    };
+  },
+
 	render(){
 		return(
 				<div className="container">
 					<div className="jumbotron text-center">
 						<h2> Crossover Video Portal </h2>
 					</div>
-					<VideoList/>
+					<VideoList resultVideos={this.state.videos}/>
 				</div>
 			);
 	}

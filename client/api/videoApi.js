@@ -1,5 +1,6 @@
 "use strict";
 
+var videos = require('./videoData').videos;
 var RestConfig = require('../constants/restConfig');
 var Dispatcher = require('../dispatcher/appDispatcher');
 var ActionTypes = require('../constants/actionTypes');
@@ -39,6 +40,7 @@ var VideoApi = {
 		// 		});
 		// 	}
 		// });
+		return videos;
 	},
 
 	getVideoById: function(id) {

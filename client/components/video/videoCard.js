@@ -7,12 +7,18 @@ var VideoRating = require('./videoRating');
 var VideoDescription = require('./videoDesc');
 
 var VideoCard = React.createClass({
+
+  propTypes:{
+		videoData: React.PropTypes.isRequired
+	},
+
   render(){
     return(
       <div>
-        <VideoTitle/>
-        <VideoRating/>
-        <VideoDescription/>
+        <VideoTitle title = {this.props.videoData.title}/>
+        <VideoPlayer rating = {this.props.videoData.srcUrl}/>
+        <VideoRating rating = {this.props.videoData.id}/>
+        <VideoDescription description = {this.props.videoData.description}/>
       </div>
     );
   }
