@@ -8,6 +8,7 @@ var reactify = require('reactify'); 			// Compile JSX
 var source = require('vinyl-source-stream');	// Use conventional text stream with gulp
 var concat = require('gulp-concat'); 			//Conactenation
 var lint = require('gulp-eslint'); 				//Lint our JS file as well as JSX
+var exec = require('child_process').exec;
 
 var config ={
 	port: 9006,
@@ -37,9 +38,17 @@ gulp.task("connect",function(){
 	});
 });
 
-gulp.task("admin",['connect'],function(){
+gulp.task("client",['connect'],function(){
 	gulp.src('frontend-target/dist/index.html')
 		.pipe(open({uri:config.devUrl + ":"+config.port+"/"}))
+});
+
+gulp.task("server",function(){
+	exec('node index.js', function (err, stdout, stderr) {
+    console.log(stdout);
+    console.log(stderr);
+    cb(err);
+  });
 });
 
 gulp.task("html",function(){
@@ -84,5 +93,4 @@ gulp.task("watch",function(){
 	gulp.watch(config.paths.css, ['css']);
 });
 
-
-gulp.task("default",['admin','html','js','css','images','lint','watch']);
+gulp.task("default",['client','server','html','js','css','images','lint','watch']);
