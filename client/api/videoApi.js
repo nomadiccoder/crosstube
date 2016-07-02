@@ -45,7 +45,7 @@ var VideoApi = {
 	getVideoById: function(id) {
 		var video = _.find(videos, {id: id});
 		return _clone(video);
-	},
+	}
 
 
 module.exports = VideoApi;
