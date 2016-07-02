@@ -40,7 +40,13 @@ var VideoApi = {
 		// 		});
 		// 	}
 		// });
-		return videos;
+		Dispatcher.dispatch({
+			actionType: ActionTypes.VIDEOS_LOADED,
+			initialData:{
+				videos: videos,
+				dataFetchState: "ready"
+			}
+		});
 	},
 
 	getVideoById: function(id) {

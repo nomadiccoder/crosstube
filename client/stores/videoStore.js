@@ -42,14 +42,14 @@ var VideoStore = assign({},EventEmitter.prototype,{
 Dispatcher.register(function(action){
 	switch(action.actionType){
 		case ActionTypes.INITIALIZE:
-			_videos = action.initialData.articles;
+			_videos = action.initialData.videos;
 			VideoStore.emitChange();
 			break;
-		case ActionTypes.ARTICLES_LOADED:
-			_videos = action.initialData.articles;
+		case ActionTypes.VIDEOS_LOADED:
+			_videos = action.initialData.videos;
 			VideoStore.emitChange();
 			break;
-		case ActionTypes.ARTICLES_LOAD_FAILED:
+		case ActionTypes.VIDEOS_LOAD_FAILED:
 			break;
 		default:
 			//no op
