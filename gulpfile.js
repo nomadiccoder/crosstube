@@ -13,9 +13,9 @@ var config ={
 	port: 9006,
 	devUrl: "http://localhost",
 	paths : {
-		html : './src/public/*.html',
-		js : 	'./src/public/**/*.js',
-		mainJS : './src/public/main.js',
+		html : './client/**/*.html',
+		js : 	'./client/**/*.js',
+		mainJS : './client/main.js',
 		css : [
 			'node_modules/bootstrap/dist/css/bootstrap.min.css',
 			'node_modules/bootstrap/dist/css/bootstrap-theme.min.css',
