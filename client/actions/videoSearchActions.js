@@ -10,3 +10,5 @@ var VideoSearchActions = {
       var searchResult = VideoApi.getAllVideos(size);
     }
 }
+
+module.exports=VideoSearchActions;

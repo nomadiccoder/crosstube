@@ -3,18 +3,15 @@
 var React = require('react');
 var Router = require('react-router');
 var Header = require('./common/header');
-var VideoStore = require('../stores/videoStore');
+var VideoSearchActions = require("../actions/videoSearchActions");
 var VideoList = require('./video/videoList');
 var Link = Router.Link;
 
 var Home = React.createClass({
 
-	getInitialState(){
-    return {
-      videos : VideoStore.getAllVideos()
-    };
-  },
-
+	componentWillMount(){
+		this.setState({resultVideos:VideoSearchActions.searchVideos(10)})
+	},
 	render(){
 		return(
 				<div className="container">
