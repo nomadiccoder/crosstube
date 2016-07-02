@@ -3,7 +3,7 @@
 var React = require('react');
 var Router = require('react-router');
 var Header = require('./common/header');
-var VidoeList = require('./videos/videoList');
+var VideoList = require('./video/videoList');
 var Link = Router.Link;
 
 var Home = React.createClass({
