@@ -13,7 +13,7 @@ var Route = Router.Route;
 var routes = (
 		<Route name="app" path="/" handler={require('./components/app')}>
 			<DefaultRoute handler={require('./components/homePage')} />
-			<Route name="video" handler={require('./components/articles/articlesPage')} />
+			//<Route name="video" handler={require('./components/articles/articlesPage')} />
 		</Route>
 	);
 
