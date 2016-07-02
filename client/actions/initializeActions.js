@@ -2,7 +2,7 @@
 
 var Dispatcher = require('../dispatcher/appDispatcher');
 var ActionTypes = require('../constants/actionTypes');
-var VideosApi = require('../api/videosApi');
+var VideosApi = require('../api/videoApi');
 
 var InitializeActions = {
 	initApp(){
