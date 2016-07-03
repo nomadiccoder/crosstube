@@ -4,13 +4,12 @@ var React = require('react');
 var ReactRouter = require('react-router');
 var VideoTitle = require('./VideoTitle');
 var VideoRating = require('./videoRating');
+var VideoPlayer = require('./videoPlayer');
 var VideoDescription = require('./videoDesc');
 
 var VideoCard = React.createClass({
 
-  propTypes:{
-		videoData: React.PropTypes.isRequired
-	},
+
 
   render(){
     return(
