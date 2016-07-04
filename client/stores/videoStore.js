@@ -2,7 +2,6 @@
 
 var Dispatcher = require('../dispatcher/appDispatcher');
 var ActionTypes = require('../constants/actionTypes');
-
 var EventEmitter = require('events').EventEmitter;
 var assign = require('object-assign');
 var _ = require('lodash');
@@ -26,6 +25,7 @@ var VideoStore = assign({},EventEmitter.prototype,{
 	},
 
 	getAllVideos(){
+		debugger;
 		return _videos;
 	},
 

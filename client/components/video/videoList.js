@@ -5,20 +5,11 @@ var ReactRouter = require('react-router');
 var VideoCard = require('./videoCard');
 var VideoStore = require('../../stores/videoStore');
 
-function getFirstTenVideos(){
-	return {
-		videos:VideoStore.getAllVideos()
-	};
-}
-
 var VideoList = React.createClass({
 
   getInitialState(){
-    return getFirstTenVideos();
-  },
-
-  componentWillMount(){
-    this.setState(getFirstTenVideos());
+		debugger;
+    return VideoStore.getAllVideos();
   },
 
   render(){

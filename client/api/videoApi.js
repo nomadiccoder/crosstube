@@ -25,7 +25,7 @@ var VideoApi = {
 		 		Dispatcher.dispatch({
 		 				actionType:ActionTypes.VIDEOS_LOADED,
 		 				initialData:{
-		 						vidoes:data,
+		 						videos:data,
 		 						dataFetchState: "ready",
 		 				}
 		 		});
@@ -34,7 +34,7 @@ var VideoApi = {
 		 		Dispatcher.dispatch({
 		 				actionType:ActionTypes.VIDEOS_LOAD_FAILED,
 		 				initialData:{
-		 						vidoes:null,
+		 						videos:null,
 		 						dataFetchState: "failed",
 		 				}
 		 		});
