@@ -44,7 +44,6 @@ Dispatcher.register(function(action){
 			VideoStore.emitChange();
 			break;
 		case ActionTypes.VIDEOS_LOADED:
-			debugger;
 			_videos = action.initialData.videos;
 			VideoStore.emitChange();
 			break;
