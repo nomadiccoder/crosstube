@@ -18,7 +18,7 @@ var Home = React.createClass({
 		return(
 				<div className="container">
 					<div className="jumbotron text-center">
-						<h2> Crossover Video Portal </h2>
+						<h2>Video Portal </h2>
 					</div>
 					<VideoList resultVideos={this.state.resultVideos}/>
 				</div>

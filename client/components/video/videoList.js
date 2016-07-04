@@ -3,12 +3,23 @@
 var React = require('react');
 var ReactRouter = require('react-router');
 var VideoCard = require('./videoCard');
+var VideoStore = require('../../stores/videoStore');
+
+function getFirstTenVideos(){
+	return {
+		videos:VideoStore.getAllVideos()
+	};
+}
 
 var VideoList = React.createClass({
 
-  propTypes:{
-		resultVideos: React.PropTypes.array.isRequired
-	},
+  getInitialState(){
+    return getFirstTenVideos();
+  },
+
+  componentWillMount(){
+    this.setState(getFirstTenVideos());
+  },
 
   render(){
     function createVideoCard(videoData){
@@ -18,7 +29,7 @@ var VideoList = React.createClass({
     }
     return(
       <div>
-        {this.props.resultVideos.map(createVideoCard,this)}
+        {this.state.resultVideos.map(createVideoCard,this)}
       </div>
     );
   }
