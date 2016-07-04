@@ -17,36 +17,29 @@ var _clone = function(item) {
 
 var VideoApi = {
 	getAllVideos: function() {
-		// $.ajax({
-		// 	url: RestConfig.VIDEOS_FETCH_URL,
-		// 	dataType: 'json',
-		// 	cache: false,
-		// 	success: function(data){
-		// 		Dispatcher.dispatch({
-		// 				actionType:ActionTypes.VIDEOS_LOADED,
-		// 				initialData:{
-		// 						vidoes:data,
-		// 						dataFetchState: "ready",
-		// 				}
-		// 		});
-		// 	},
-		// 	error:function(xhr,status,err){
-		// 		Dispatcher.dispatch({
-		// 				actionType:ActionTypes.VIDEOS_LOAD_FAILED,
-		// 				initialData:{
-		// 						vidoes:null,
-		// 						dataFetchState: "failed",
-		// 				}
-		// 		});
-		// 	}
-		// });
-		Dispatcher.dispatch({
-			actionType: ActionTypes.VIDEOS_LOADED,
-			initialData:{
-				videos: videos,
-				dataFetchState: "ready"
-			}
-		});
+		 $.ajax({
+		 	url: RestConfig.VIDEOS_FETCH_URL,
+		 	dataType: 'json',
+		 	cache: false,
+		 	success: function(data){
+		 		Dispatcher.dispatch({
+		 				actionType:ActionTypes.VIDEOS_LOADED,
+		 				initialData:{
+		 						vidoes:data,
+		 						dataFetchState: "ready",
+		 				}
+		 		});
+		 	},
+		 	error:function(xhr,status,err){
+		 		Dispatcher.dispatch({
+		 				actionType:ActionTypes.VIDEOS_LOAD_FAILED,
+		 				initialData:{
+		 						vidoes:null,
+		 						dataFetchState: "failed",
+		 				}
+		 		});
+		 	}
+		 });
 	},
 
 	getVideoById: function(id) {

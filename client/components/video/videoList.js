@@ -13,7 +13,7 @@ var VideoList = React.createClass({
   render(){
     function createVideoCard(videoData){
       return(
-        <VideoCard videoData={videoData}/>
+        <VideoCard key = {videoData.id} videoData={videoData}/>
       );
     }
     return(
