@@ -8,7 +8,6 @@ var VideoStore = require('../../stores/videoStore');
 var VideoList = React.createClass({
 
   getInitialState(){
-		debugger;
     return VideoStore.getAllVideos();
   },
 

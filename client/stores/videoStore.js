@@ -9,7 +9,6 @@ var CHANGE_EVENT = 'change';
 
 var _videos = [];
 
-
 var VideoStore = assign({},EventEmitter.prototype,{
 
 	addChangeListener(callback){
@@ -25,7 +24,6 @@ var VideoStore = assign({},EventEmitter.prototype,{
 	},
 
 	getAllVideos(){
-		debugger;
 		return _videos;
 	},
 

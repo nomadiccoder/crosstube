@@ -9,7 +9,7 @@ var InitializeActions = {
 		Dispatcher.dispatch({
 			actionType:ActionTypes.INITIALIZE,
 			initialData:{
-				articles:VideosApi.getAllVideos(),
+				videos:VideosApi.getAllVideos(),
 				dataFetchState: "loading",
 			}
 		});
