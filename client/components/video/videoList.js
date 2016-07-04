@@ -8,7 +8,14 @@ var VideoStore = require('../../stores/videoStore');
 var VideoList = React.createClass({
 
   getInitialState(){
-    return VideoStore.getAllVideos();
+    return{
+      videos:[]
+    };
+  },
+
+  componentWillMount(){
+    var videos = VideoStore.getAllVideos();
+    this.setState({resultVideos:videos});
   },
 
   render(){
