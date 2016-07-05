@@ -38,6 +38,7 @@ var VideoStore = assign({},EventEmitter.prototype,{
 });
 
 Dispatcher.register(function(action){
+	debugger;
 	switch(action.actionType){
 		case ActionTypes.INITIALIZE:
 			_videos = action.initialData.videos;

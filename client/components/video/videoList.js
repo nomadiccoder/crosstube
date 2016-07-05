@@ -9,17 +9,21 @@ var VideoList = React.createClass({
 
   getInitialState(){
     return{
-      videos:[]
+      videos:VideoStore.getAllVideos()
     };
   },
 
+  _onChange(){
+		this.setState({ resultVideos:VideoStore.getAllVideos() });
+	},
+
   componentWillMount(){
-    var videos = VideoStore.getAllVideos();
-    this.setState({resultVideos:videos});
+    VideoStore.addChangeListener(this._onChange);
   },
 
   render(){
     function createVideoCard(videoData){
+      debugger;
       return(
         <VideoCard key = {videoData.id} videoData={videoData}/>
       );

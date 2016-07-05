@@ -14,7 +14,7 @@ var VideoCard = React.createClass({
   render(){
     return(
       <div>
-        <VideoTitle title = {this.props.videoData.title}/>
+        <VideoTitle title = {this.props.videoData.name}/>
         <VideoPlayer rating = {this.props.videoData.srcUrl}/>
         <VideoRating rating = {this.props.videoData.id}/>
         <VideoDescription description = {this.props.videoData.description}/>

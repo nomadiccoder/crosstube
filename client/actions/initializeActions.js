@@ -6,7 +6,14 @@ var VideosApi = require('../api/videoApi');
 
 var InitializeActions = {
 	initApp(){
-		VideosApi.getAllVideos();
+
+		Dispatcher.dispatch({
+			actionType:ActionTypes.INITIALIZE,
+			initialData:{
+				videos:VideosApi.getAllVideos(),
+				dataFetchState: "loading",
+			}
+		});
 	}
 };
 
